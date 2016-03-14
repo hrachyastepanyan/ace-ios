@@ -18,6 +18,7 @@
 #import "InCallDialpadView.h"
 #import "RTTMessageModel.h"
 #import "BubbleTableViewCell.h"
+#import "StatusBar.h"
 
 
 #define kBottomButtonsAnimationDuration     0.3f
@@ -74,6 +75,7 @@ typedef NS_ENUM(NSInteger, CallQualityStatus) {
 @property (weak, nonatomic) IBOutlet UIButton *closeChatButton;
 @property (strong, nonatomic) NSMutableString *msgBuffer;
 @property (strong, nonatomic) NSMutableString *minimizedTextBuffer;
+@property (weak, nonatomic) IBOutlet StatusBar *statusBar;
 
 @end
 
