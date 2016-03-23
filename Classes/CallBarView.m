@@ -244,6 +244,13 @@
     }
 }
 
+- (IBAction)switchMicrophoneButtonAction:(UIButton *)sender {
+    
+    if (self.switchMicrophoneButtonActionHandler) {
+        self.switchMicrophoneButtonActionHandler(sender);
+    }
+}
+
 - (IBAction)changeVideoLayoutButtonAction:(UIButton *)sender {
     
     // Automatic hiding
@@ -270,14 +277,6 @@
 
 
 #pragma mark - Setters/Getters
-// Automatic hiding
-//- (void)setHideAfterDelay:(NSTimeInterval)hideAfterDelay {
-//    
-//    _hideAfterDelay = hideAfterDelay;
-//    
-//    [self resetHideTimer];
-//}
-
 - (void)setVideoButtonSelected:(BOOL)videoButtonSelected {
     
     self.videoButton.selected = videoButtonSelected;
@@ -332,6 +331,5 @@
     
     self.chatButton.hidden = hidden;
 }
-
 
 @end
