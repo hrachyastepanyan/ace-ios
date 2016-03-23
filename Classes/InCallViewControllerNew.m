@@ -641,6 +641,16 @@ typedef NS_ENUM(NSInteger, CallQualityStatus) {
         [[LinphoneManager instance] switchCamera];
     };
     
+    self.callBarView.switchMicrophoneButtonActionHandler = ^(UIButton *sender) {
+        
+        if ([[LinphoneManager instance] speakerEnabled]) {
+            [[LinphoneManager instance] setSpeakerEnabled:NO];
+        }
+        else {
+            [[LinphoneManager instance] setSpeakerEnabled:YES];
+        }
+    };
+    
     self.callBarView.changeVideoLayoutButtonActionHandler = ^(UIButton *sender) {
         
     };

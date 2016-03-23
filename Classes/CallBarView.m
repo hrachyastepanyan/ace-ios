@@ -239,6 +239,7 @@
     // Automatic hiding
 //    [self resetHideTimer];
     
+    [self hideMoreMenu];
     if (self.switchCameraButtonActionHandler) {
         self.switchCameraButtonActionHandler(sender);
     }
@@ -246,6 +247,7 @@
 
 - (IBAction)switchMicrophoneButtonAction:(UIButton *)sender {
     
+    [self hideMoreMenu];
     if (self.switchMicrophoneButtonActionHandler) {
         self.switchMicrophoneButtonActionHandler(sender);
     }
@@ -256,6 +258,7 @@
     // Automatic hiding
 //    [self resetHideTimer];
     
+    [self hideMoreMenu];
     if (self.changeVideoLayoutButtonActionHandler) {
         self.changeVideoLayoutButtonActionHandler(sender);
     }
